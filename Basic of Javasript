@@ -1,0 +1,220 @@
+# 📘 JavaScript Built-in Functions — GitHub README
+
+Welcome to the ultimate guide for JavaScript's built-in functions! 🚀
+This README will walk you through the most commonly used functions, complete with examples, so you can level up your JS skills. 
+
+---
+
+## 🖥️ **Console & Alerts**
+
+- `console.log()` → Logs output to the console.
+```javascript
+console.log("Hello, World!"); // Output: Hello, World!
+```
+
+- `alert()` → Shows a popup alert.
+```javascript
+alert("This is an alert box!");
+```
+
+- `prompt()` → Asks for user input.
+```javascript
+let name = prompt("What is your name?");
+console.log("Hello, " + name);
+```
+
+- `confirm()` → Asks for confirmation (OK/Cancel).
+```javascript
+let isConfirmed = confirm("Are you sure?");
+console.log(isConfirmed); // true or false
+```
+
+---
+
+## 🧠 **String Functions**
+
+- `charAt()` → Returns a character at a specific index.
+```javascript
+let str = "JavaScript";
+console.log(str.charAt(3)); // Output: a
+```
+
+- `toUpperCase()` / `toLowerCase()` → Changes string case.
+```javascript
+console.log(str.toUpperCase()); // JAVASCRIPT
+console.log(str.toLowerCase()); // javascript
+```
+
+- `trim()` → Removes whitespace.
+```javascript
+let spaced = "  hello  ";
+console.log(spaced.trim()); // "hello"
+```
+
+- `includes()` → Checks if a string contains another string.
+```javascript
+console.log(str.includes("Script")); // true
+```
+
+- `slice()` → Extracts part of a string.
+```javascript
+console.log(str.slice(0, 4)); // Java
+```
+
+- `replace()` → Replaces part of a string.
+```javascript
+console.log(str.replace("Script", "Fun")); // JavaFun
+```
+
+---
+
+## 🔢 **Number Functions**
+
+- `parseInt()` / `parseFloat()` → Parses strings to numbers.
+```javascript
+console.log(parseInt("42")); // 42
+console.log(parseFloat("3.14")); // 3.14
+```
+
+- `isNaN()` → Checks if a value is NaN.
+```javascript
+console.log(isNaN("hello")); // true
+```
+
+- `toFixed()` → Formats a number to a fixed decimal.
+```javascript
+let num = 3.14159;
+console.log(num.toFixed(2)); // 3.14
+```
+
+---
+
+## 🗓 **Date Functions**
+
+- `Date()` → Gets the current date/time.
+```javascript
+let date = new Date();
+console.log(date.toDateString());
+```
+
+- `getFullYear()` / `getMonth()` / `getDate()` → Gets parts of a date.
+```javascript
+console.log(date.getFullYear()); // 2025
+console.log(date.getMonth()); // 2 (March, zero-indexed)
+console.log(date.getDate()); // Day of the month
+```
+
+---
+
+## 📚 **Array Functions**
+
+- `push()` / `pop()` → Adds/removes elements.
+```javascript
+let arr = [1, 2, 3];
+arr.push(4);
+console.log(arr); // [1, 2, 3, 4]
+arr.pop();
+console.log(arr); // [1, 2, 3]
+```
+
+- `shift()` / `unshift()` → Adds/removes elements from the start.
+```javascript
+arr.unshift(0);
+console.log(arr); // [0, 1, 2, 3]
+arr.shift();
+console.log(arr); // [1, 2, 3]
+```
+
+- `map()` → Transforms elements.
+```javascript
+let doubled = arr.map((x) => x * 2);
+console.log(doubled); // [2, 4, 6]
+```
+
+- `filter()` → Filters elements.
+```javascript
+let even = arr.filter((x) => x % 2 === 0);
+console.log(even); // [2]
+```
+
+- `reduce()` → Reduces an array to a single value.
+```javascript
+let sum = arr.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 6
+```
+
+- `find()` → Finds the first element matching a condition.
+```javascript
+let found = arr.find((x) => x > 1);
+console.log(found); // 2
+```
+
+- `sort()` → Sorts elements.
+```javascript
+let nums = [3, 1, 2];
+nums.sort();
+console.log(nums); // [1, 2, 3]
+```
+
+---
+
+## 🛠 **Object Functions**
+
+- `Object.keys()` / `Object.values()` / `Object.entries()` → Gets object properties, values, or key-value pairs.
+```javascript
+let obj = { a: 1, b: 2, c: 3 };
+console.log(Object.keys(obj)); // ['a', 'b', 'c']
+console.log(Object.values(obj)); // [1, 2, 3]
+console.log(Object.entries(obj)); // [['a', 1], ['b', 2], ['c', 3]]
+```
+
+- `hasOwnProperty()` → Checks if a property exists.
+```javascript
+console.log(obj.hasOwnProperty('a')); // true
+```
+
+---
+
+## 🔧 **Utility Functions**
+
+- `setTimeout()` / `setInterval()` → Delays and intervals.
+```javascript
+setTimeout(() => console.log("After 2 seconds"), 2000);
+let interval = setInterval(() => console.log("Every second"), 1000);
+clearInterval(interval);
+```
+
+- `JSON.stringify()` / `JSON.parse()` → Convert to/from JSON.
+```javascript
+let json = JSON.stringify(obj);
+console.log(json); // '{"a":1,"b":2,"c":3}'
+console.log(JSON.parse(json)); // { a: 1, b: 2, c: 3 }
+```
+
+- `encodeURI()` / `decodeURI()` → Encodes/decodes URIs.
+```javascript
+let uri = encodeURI("https://example.com/?name=John Doe");
+console.log(uri);  
+console.log(decodeURI(uri)); 
+```
+
+---
+
+## 🛠️ **Examples & Usage**
+
+📂 Save this file as `README.md`, and GitHub will automatically render it as a nicely formatted document.
+
+💡 Want to contribute or improve this list? Feel free to open a PR or suggest edits! 🚀
+
+---
+
+## 📄 **License**
+
+MIT License — Free to use and share!
+
+Happy coding! 🧑‍💻✨
+
+---
+
+Made with ❤️ by [Your Name](https://github.com/yourgithubusername)
+
